@@ -1,15 +1,23 @@
 body{
     background: linear-gradient(to top, black, pink);
-}
-
-.container{
+    color: white;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
 }
 
-img{
-    width: 40%;
+.container {
+    /* display: flex;
+    align-items: center;
+    flex-direction: column;*/
+    justify-content: center;
+
+} 
+
+.container-img-artista{
+    text-align: center;
+}
+
+.container-img-artista img{
+    max-width: 100%;
+    
 }
