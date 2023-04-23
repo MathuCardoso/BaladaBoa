@@ -33,13 +33,16 @@
             </audio>
         </div>
 
+        <a href="#l" class="lyricsButton">Letra</a>
+
     </div>
 </div>
 
     <div class="cont2">
 
-    <div class="cont-letra">
-        <h2>Letra</h2>
+        <div id="l"></div>
+    <div class="cont-letra" id="container2">
+        <h2 id="letraTittle">Letra</h2>
 
         <div class="letra">
             <p>Eu já lavei o meu carro, regulei o som
@@ -143,7 +146,7 @@
         heart.style.color = 'white';
         verde = false;
       } else {
-        heart.style.color = '#1DB954';
+        heart.style.color = 'rgb(125, 3, 125)';
         verde = true;
       }
     }
