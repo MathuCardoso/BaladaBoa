@@ -31,9 +31,9 @@ h1, h4{
 }
 
 .cont1{
-    background: linear-gradient(to top, black,rgb(220, 143, 156));
     margin-bottom: 10px;
     height: 100vh;
+    background: linear-gradient(to top, black,  #d3719a);
 }
 
 .cont2{
@@ -75,6 +75,7 @@ h1, h4{
 
 .fa-heart{
     transition: all 0.5s ease;
+    margin-left: 47%;
 }
 
 .fa-heart:hover{
