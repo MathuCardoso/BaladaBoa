@@ -1,70 +1,60 @@
 body{
     color: white;
-    min-height: 100vh;
-    min-width: 100vw;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    font-family: sans-serif;
+    background: linear-gradient(to top, black 6%, #d46f99);
+    background-attachment: fixed;
+    height: 100vh;
 }
 
-html{
-    scroll-behavior: smooth;
+p::selection{
+    background-color: #1DB954;
+    color: black;
+}
+
+h1::selection{
+    background-color: #1DB954;
+    color: black;
+}
+
+h2::selection{
+    background-color: #1DB954;
+    color: black;
+}
+
+h4::selection{
+    background-color: #1DB954;
+    color: black;
+}
+
+br::selection{
+    background-color: #1DB954;
+}
+
+img::selection{
+    background-color: #1DB954;
 }
 
 h1, h4{
     margin: 0;
 }
 
-#songName{
-    margin-top: 15px;
-}
-
-#artist{
-    color: gray;
-}
-
-.container{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to bottom, black 25%,  rgb(125, 3, 125));
-}
+/*CONTAINER 1*/
 
 .cont1{
-    margin-bottom: 10px;
-    height: 100vh;
-    background: linear-gradient(to top, black,  #d3719a);
-}
-
-.cont2{
-    background: rgb(220, 143, 156);
-    color: black;
-    width: 80vw;
-    border-radius: 30px;
-    margin: auto;
-}
-
-#letraTittle{
-    font-size: 30px;
-}
-
-.letra{
-    font-size: 20px;
+    width: 50%;
+    background: none;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .cont-song{
     text-align: center;
-    margin-top: 27px;
-}
-
-.lyricsButton{
-    text-decoration: none;
-    color: white;
-    border-bottom: 2px solid rgb(125, 3, 125);
-    padding: 10px;
-    border-radius: 10px;
-    letter-spacing: 4px;
-    font-size: 18px;
+    margin-top: 4vh;
+    width: 30vw;
 }
 
 .cont-songArtist{
@@ -73,9 +63,40 @@ h1, h4{
     width: 30vw;
 }
 
+#songName{
+    width: 30vw;
+}
+
+.img img{
+    width: 30vw;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.229);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.img img:hover{
+    transform: scale(105%);
+}
+
 .fa-heart{
-    transition: all 0.5s ease;
-    margin-left: 47%;
+    transition: all 0.4s ease;
+}
+
+.flex{
+    display: flex;
+    width: 30vw;
+}
+
+.flex h1{
+    margin-top: 15px;
+}
+
+#songName{
+    margin-top: 15px;
+}
+
+#artist{
+    color: rgb(225, 209, 209);
 }
 
 .fa-heart:hover{
@@ -83,26 +104,70 @@ h1, h4{
     transform: scale(110%);
 }
 
-.cont-img img{
-    width: 30vw;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.229);
-    border-radius: 5px;
-}
-
 audio{
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     width: 30vw;
     outline: none;
 }
 
 audio::-webkit-media-controls-play-button {
-    background-color: rgb(125, 3, 125);
+    background-color: #1DB954;
     border-radius: 50%;
 }
-  
-.p{
-    margin-top: 500px;
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    width: 100%;
+}
+
+.links p{
+    margin-top: 5px;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+}
+
+.fa-github:hover{
+    color: red;
+}
+
+a:hover{
+    color: #1DB954;
+}
+
+/*CONTAINER 2*/
+
+.cont2{
+    background: none;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+#letraTittle{
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.letra{
+    font-size: 27px;
+    color: white;
+    font-weight: bold;
+    width: 45vw;
+    text-align: start;
 }
 
 .cont-letra{
@@ -111,34 +176,137 @@ audio::-webkit-media-controls-play-button {
     width: 30%;
 }
 
-footer{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(125, 3, 125);
-    font-size: 19px;
-    background-color: black;
-    margin-top: 20px;
+
+
+@media screen and (max-width:768px){
+
+    body{
+        background: linear-gradient(to top, black 85%, #d46f99);
+        height: auto;
+    }
+    
+    .cont1{
+        width: 100vw;
+        position: relative;
+    }
+    
+    .cont2{
+        width: 100vw;
+        position: relative;
+    }
+    
+    .letra{
+        width: 95vw;
+    }
+    
+    .cont-song{
+        margin-top: 5vh;
+        width: 85vw;
+    }
+    
+    .cont-songArtist{
+        width: 85vw;
+    }
+    
+    #songName{
+        width: 85vw;
+    }
+    
+    .flex{
+        width: 85vw;
+    }
+    
+    .flex h1{
+        margin-top: 15px;
+    }
+    
+    .img img{
+        width: 85vw;
+        transition: none;
+    }
+    
+    .img img:hover{
+        transform: none;
+    }
+    
+    audio{
+        width: 85vw;
+    }
+    
+    .links{
+        margin-top: 10px;
+    }
+    
 }
 
+@media screen and (min-width:824px) and (max-width: 900px){
 
-nav{
-    text-align: start;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-top: 20px;
-}
+    
+    body{
+        background: linear-gradient(to top, black 85%, #d46f99);
+        height: auto;
+    }
+    
+    .cont1{
+        width: 100vw;
+        position: relative;
+    }
+    
+    .cont2{
+        width: 100vw;
+        position: relative;
+    }
+    
+    .letra{
+        width: 95vw;
+    }
+    
+    .cont-song{
+        margin-top: 2vh;
+        width: 100vw;
+    }
+    
+    .cont-songArtist{
+        width: 24vw;
+    }
+    
+    #songName{
+        width: 24vw;
+        margin-top: 0;
+    }
+    
+    .flex{
+        width: 24vw;
+    }
+    
+    .flex h1{
+        margin-top: 0;
+        font-size: 18px;
+    }
 
-nav a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    text-decoration: underline;
-}
+    h4{
+        font-size: 10px;
+    }
+    
+    .img img{
+        width: 24vw;
+        transition: none;
+    }
+    
+    .img img:hover{
+        transform: none;
+    }
+    
+    audio{
+        margin-top: 10px;
+        width: 50vw;
+        height: 45px;
+    }
+    
+    .links{
+        margin-top: 10px;
+    }
 
-nav{
-    padding-bottom: 10px;
-    font-size: 17px;
-    font-weight: bold;
+
+    
 }
