@@ -13,6 +13,8 @@
 </head>
 <body>
 
+    <div id="topo"></div>
+
     <div class="container">
         
         <div class="cont1">
@@ -31,8 +33,9 @@
                 <h4 id="artist">Gusttavo Lima</h4>
         </div>
 
-            <audio src="01-balada boa - gustavo lima.mp3" controls></audio>
-
+        <div class="player">
+             <audio src="01-balada boa - gustavo lima.mp3" controls></audio>
+        </div>
             <div class="links">
 
             <a href="https://github.com/MathuCardoso/BaladaBoa" target="_blank">
@@ -53,7 +56,8 @@
     <div class="cont2">
 
         <div class="letra">
-            <h2 id="letraTittle">Letra</h2>
+                <h2 id="letraTittle">Letra</h2>
+
 
             <p>Eu já lavei o meu carro, regulei o som
                 <br>
@@ -62,6 +66,7 @@
                 Menina fica a vontade, entre e faça a festa
                 <br>
                 Me liga mais tarde, vou adorar, vamos nessa</p>
+
             <p>Gata, me liga, mais tarde tem balada
                 <br>
                 Quero curtir com você na madrugada
@@ -196,6 +201,10 @@
                 Tchê, tchê, tchê
                 <br>
                 Gusttavo Lima e você</p>
+                <div class="voltar">
+                <a href="#topo" id="voltar">Voltar <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></a>
+            </div>
+                
         </div>
 </div>
 
@@ -204,17 +213,30 @@
 <script>
     var heart = document.querySelector('.fa-solid.fa-heart');
     var verde = false;
+
     heart.onclick = function like() {
-      if (verde) {
+    if (verde) {
         heart.style.color = 'white';
         verde = false;
-      } else {
+    } else {
         heart.style.color = '#1DB954';
         verde = true;
-      }
     }
+}
 
+
+    var show = document.querySelector('.show');
+    var letra = document.querySelector('.letra');
+
+    show.onclick = function() {
+        if (show.textContent == 'Mostrar letra') {
+        letra.style.display = 'block';
+        show.innerHTML = 'Ocultar letra';
+    } else {
+        letra.style.display = 'none';
+        show.innerHTML = 'Mostrar letra';
+    }
+};
 </script>
-
 </body>
 </html>
